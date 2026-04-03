@@ -6,38 +6,50 @@
 <title>Blindagem Energética</title>
 
 <style>
-body {
+
+/* RESET */
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   background: #000;
-  display: flex;
-  justify-content: center;
 }
 
+/* 🔥 REMOVE O FLEX DO BODY */
+body {
+  display: block;
+}
+
+/* CONTAINER */
 .container {
   position: relative;
-  max-width: 420px;
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto; /* centraliza no desktop */
 }
 
 /* IMAGEM */
 .container img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
-/* BOTÃO REAL */
+/* BOTÃO */
 .cta {
   position: absolute;
-
-  /* POSIÇÃO AJUSTADA COM BASE NA SUA IMAGEM */
-  bottom: 55px;
+  bottom: 8%;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%; /* 🔥 importante */
+  display: flex;
+  justify-content: center;
 }
 
 .cta button {
-  width: 300px;
-  height: 35px;
+  width: 70%;
+  height: 40px;
 
   background: linear-gradient(90deg, #f6d67a, #e0b24d);
   border: none;
@@ -48,23 +60,49 @@ body {
   color: #000;
 
   cursor: pointer;
-
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+
+  transition: 0.2s;
 }
 
-/* EFEITO HOVER (opcional mas ajuda na conversão) */
+/* HOVER */
 .cta button:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
-</style>
 
+/* TABLET */
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .cta button {
+    height: 45px;
+    font-size: 17px;
+  }
+}
+
+/* PC */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .cta button {
+    height: 42px;
+    font-size: 16px;
+    width: 65%;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <img src="pagina.png">
+  <img src="pagina.png" alt="Blindagem Energética">
 
   <div class="cta">
     <button onclick="window.location.href='https://pay.kiwify.com.br/XnCMuy1'">

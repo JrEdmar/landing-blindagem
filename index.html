@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blindagem Energética</title>
+
+<style>
+body {
+  margin: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+}
+
+/* IMAGEM */
+.container img {
+  width: 100%;
+  display: block;
+}
+
+/* BOTÃO REAL */
+.cta {
+  position: absolute;
+
+  /* POSIÇÃO AJUSTADA COM BASE NA SUA IMAGEM */
+  bottom: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta button {
+  width: 300px;
+  height: 35px;
+
+  background: linear-gradient(90deg, #f6d67a, #e0b24d);
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+/* EFEITO HOVER (opcional mas ajuda na conversão) */
+.cta button:hover {
+  transform: scale(1.03);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <img src="pagina.png">
+
+  <div class="cta">
+    <button onclick="window.location.href='SEU_LINK_AQUI'">
+      ATIVE SUA BLINDAGEM AGORA ➤
+    </button>
+  </div>
+
+</div>
+
+</body>
+</html>
